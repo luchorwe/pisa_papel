@@ -25,7 +25,6 @@ h1 {
     top: 50px; /* Ajusté la posición vertical del botón */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9999; /* Asegura que esté encima de otros elementos */
 }
 
 #audio-button img {
