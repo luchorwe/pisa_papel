@@ -24,10 +24,16 @@ h1 {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del botón */
     display: flex; /* Agrega display flex */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el botón */
 }
+
 
 #audio-image {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del botón */
