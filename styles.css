@@ -27,12 +27,14 @@ h1 {
 #audio-button {
     width: 50px; /* Ancho deseado del botón */
     height: 50px; /* Altura deseada del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Elimina el borde */
+    outline: none; /* Elimina el contorno al hacer clic */
+    background-color: transparent; /* Fondo transparente */
+    background-size: contain; /* Ajusta la imagen dentro del botón */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el botón */
 }
-
-#audio-button:hover {
-    /* Estilos adicionales al pasar el mouse */
-}
-
 
 #options {
     margin-top: 20px;
