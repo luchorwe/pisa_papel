@@ -27,7 +27,10 @@
         </div>
     </div>
 
-    <img id="play-audio" src="on.png" alt="Play Audio" class="custom-button" onclick="playAudio()">
+    <!-- Botón personalizado para controlar la reproducción del audio -->
+    <button id="audio-control" class="custom-audio-button" onclick="toggleAudio()">
+        <img id="play-pause-icon" src="play.png" alt="Play">
+    </button>
     <audio id="background-music" loop>
         <source src="chill.mp3" type="audio/mp3">
         Tu navegador no admite la reproducción de audio.
