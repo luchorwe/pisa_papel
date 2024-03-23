@@ -10,20 +10,12 @@
 <body>
   <body>
       
-  <audio id="background-music" controls loop name="media">
+  <audio id="background-music" controls loop onloadeddata="setTimeout(function() { document.getElementById('background-music').play(); }, 20);">
   <source src="chill.mp3" type="audio/mpeg">
   <!-- Si tienes otros formatos de audio, puedes agregarlos como fuentes alternativas aquí -->
   Tu navegador no admite la reproducción de audio.
 </audio>
     
-    <script>
-  window.onload = function() {
-    setTimeout(function() {
-      var audio = document.getElementById('background-music');
-      audio.play();
-    }, 20); // Espera 20 milisegundos antes de reproducir el audio
-  };
-</script>
 
 </body>
     
