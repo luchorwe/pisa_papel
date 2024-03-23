@@ -24,7 +24,6 @@ h1 {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del botón */
     display: flex; /* Agrega display flex */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
