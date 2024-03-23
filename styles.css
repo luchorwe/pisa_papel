@@ -29,8 +29,8 @@ h1 {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     position: fixed; /* Posición fija */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
+    text-align: center;
+    margin-top: 50px;
     transform: translate(-50%, -50%); /* Centra el botón */
 }
 
@@ -38,7 +38,6 @@ h1 {
 #audio-image {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del botón */
     height: auto; /* Ajusta la altura automáticamente */
-    max-height: 100%; /* Establece una altura máxima del 100% */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
 }
 
