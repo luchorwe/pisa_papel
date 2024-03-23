@@ -20,8 +20,9 @@ h1 {
 #audio-button {
     width: 50px;
     height: 50px;
-    background-color: transparent;
-    border: none;
+    background-color: white; /* Fondo blanco */
+    border: 2px solid black; /* Borde negro de 2px */
+    border-radius: 50%; /* Bordes redondeados */
     cursor: pointer;
 }
 
