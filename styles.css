@@ -21,26 +21,15 @@ h1 {
 #audio-button {
     width: 50px;
     height: 50px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex; /* Agrega display flex */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    position: fixed; /* Posición fija */
-    bottom: 20px; /* Alinea el botón hacia abajo */
-    left: 50%; /* Centra horizontalmente */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#audio-image {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del botón */
-    height: auto; /* Ajusta la altura automáticamente */
-    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
-}
-
-#audio-button:hover {
-    /* Estilos adicionales al pasar el mouse */
+#audio-button img {
+    width: 100%;
+    height: 100%;
 }
 
 
