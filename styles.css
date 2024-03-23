@@ -20,18 +20,23 @@ h1 {
 #audio-button {
     width: 50px;
     height: 50px;
-    background-color: white; /* Fondo blanco */
-    border: 2px solid black; /* Borde negro de 2px */
-    border-radius: 50%; /* Bordes redondeados */
+    background: solid white; /* Fondo blanco */
+    border: 2px solid black; /* Borde de 2px sólido negro */
+    border-radius: 50%; /* Bordes redondeados para hacer un círculo */
     cursor: pointer;
-    padding: 5px; /* Ajusta el relleno para que el borde no se superponga a la imagen */
-    display: inline-block; /* Asegúrate de que el botón se comporte como un bloque */
+    outline: none; /* Elimina el contorno al hacer clic */
+}
+
+#audio-button:hover {
+    border-color: red; /* Cambia el color del borde al pasar el mouse */
 }
 
 #audio-image {
     width: 100%;
     height: 100%;
+    opacity: 0; /* Hace la imagen transparente para que solo se vea el fondo */
 }
+
 
 #options {
     margin-top: 20px;
