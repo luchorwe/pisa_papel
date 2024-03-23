@@ -8,6 +8,15 @@
  
 </head>
 <body>
+
+    <button id="audio-button" onclick="toggleAudio()">
+        <img id="audio-image" src="on.png" alt="Reproducir">
+    </button>
+    <audio id="background-music">
+        <source src="chill.mp3" type="audio/mp3">
+        Tu navegador no admite la reproducción de audio.
+    </audio>
+
     <div id="game-container">
         <h1>Piedra, Papel, Tijera con IA</h1>
          <div id="emojis">
@@ -27,14 +36,6 @@
         </div>
     </div>
 
-    <!-- Botón personalizado para controlar la reproducción del audio -->
-     <button id="audio-control" class="custom-audio-button" onclick="toggleAudio()">
-        <img id="audio-icon" src="on.png" alt="On">
-    </button>
-    <audio id="background-music" loop>
-        <source src="chill.mp3" type="audio/mp3">
-        Tu navegador no admite la reproducción de audio.
-    </audio>
     <script src="script.js"></script>
 </body>
 </html>
