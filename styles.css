@@ -18,16 +18,12 @@ h1 {
 }
 
 #audio-button {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+    width: 50px; /* Ancho deseado del botón */
+    height: 50px; /* Altura deseada del botón */
 }
 
-
-#audio-image {
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Hace la imagen transparente para que solo se vea el fondo */
+#audio-button:hover {
+    /* Estilos adicionales al pasar el mouse */
 }
 
 
