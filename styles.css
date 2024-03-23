@@ -19,16 +19,19 @@ h1 {
 
 /* Estilos para el botón imagen */
 .custom-button {
-    width: 100px; /* Ancho de la imagen */
-    height: 100px; /* Alto de la imagen */
+    width: 40px; /* Ancho de la imagen */
+    height: 40px; /* Alto de la imagen */
     cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: transform 0.2s; /* Agregar transición para suavizar el efecto */
 }
 
 .custom-button:focus {
     outline: none; /* Eliminar el contorno al hacer clic */
 }
 
-/* Otros estilos para la imagen según sea necesario */
+.custom-button:hover {
+    transform: scale(1.1); /* Escalar la imagen al pasar el ratón por encima */
+}
 
 #options {
     margin-top: 20px;
