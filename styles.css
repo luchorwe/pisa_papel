@@ -21,7 +21,7 @@ h1 {
     width: 50px;
     height: 50px;
     background-color: white; /* Fondo blanco */
-    border: 2px solid black; /* Borde de 2px sólido negro */
+    border: 1px solid black; /* Borde de 2px sólido negro */
     border-radius: 50%; /* Bordes redondeados para hacer un círculo */
     cursor: pointer;
     outline: none; /* Elimina el contorno al hacer clic */
