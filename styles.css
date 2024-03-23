@@ -20,16 +20,9 @@ h1 {
 #audio-button {
     width: 50px;
     height: 50px;
-    background-color: white; /* Fondo blanco */
-    border: 1px solid black; /* Borde de 2px sólido negro */
-    border-radius: 50%; /* Bordes redondeados para hacer un círculo */
     cursor: pointer;
-    outline: none; /* Elimina el contorno al hacer clic */
 }
 
-#audio-button:hover {
-    border-color: red; /* Cambia el color del borde al pasar el mouse */
-}
 
 #audio-image {
     width: 100%;
