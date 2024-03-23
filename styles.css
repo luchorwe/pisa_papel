@@ -17,13 +17,10 @@ h1 {
   margin-bottom: 30px; /* Espacio debajo del título */
 }
 
-/* Estilos para el botón personalizado */
+/* Estilos para el botón imagen */
 .custom-button {
-    width: 100px; /* Ancho del botón */
-    height: 100px; /* Alto del botón */
-    background-image: url('on.png'); /* URL de la imagen de fondo */
-    background-size: cover; /* Ajustar la imagen de fondo */
-    border: none; /* Eliminar borde */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
     cursor: pointer; /* Cambiar el cursor al pasar por encima */
 }
 
@@ -31,6 +28,7 @@ h1 {
     outline: none; /* Eliminar el contorno al hacer clic */
 }
 
+/* Otros estilos para la imagen según sea necesario */
 
 #options {
     margin-top: 20px;
