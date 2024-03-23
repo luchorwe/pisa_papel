@@ -17,18 +17,19 @@ h1 {
   margin-bottom: 30px; /* Espacio debajo del título */
 }
 
-/* Estilos para el botón personalizado de control de audio */
-.custom-audio-button {
-    background-color: transparent; /* Hacer el fondo transparente */
-    border: none; /* Eliminar el borde */
-    cursor: pointer; /* Cambiar el cursor al pasar por encima */
-    padding: 0; /* Eliminar el relleno */
+#audio-button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-#audio-icon {
-    width: 40px; /* Ancho del icono */
-    height: 40px; /* Alto del icono */
+#audio-image {
+    width: 100%;
+    height: 100%;
 }
+
 
 #options {
     margin-top: 20px;
