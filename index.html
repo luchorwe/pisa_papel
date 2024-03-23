@@ -8,23 +8,20 @@
  
 </head>
 <body>
-  <audio id="background-music" autoplay loop>
-    <source src="chill.wav" type="audio/wav">
-    <!-- Si tienes otros formatos de audio, puedes agregarlos como fuentes alternativas aquí -->
-    Tu navegador no admite la reproducción de audio.
-</audio>
+  <script>
+// Crear un elemento de audio
+var audio = new Audio();
 
-<script>
-  // Obtener el elemento de audio
-  var audio = document.getElementById("background-music");
+// Establecer la ruta del archivo de música
+audio.src = 'chill.wav';
 
-  // Reproducir el audio en bucle
-  audio.loop = true;
+// Reproducir en bucle
+audio.loop = true;
 
-  // Reproducir el audio automáticamente al cargar la página
-  audio.autoplay = true;
+// Reproducir la música
+audio.play();
 </script>
-
+    
     <div id="game-container">
         <h1>Piedra, Papel, Tijera con IA</h1>
          <div id="emojis">
