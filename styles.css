@@ -30,7 +30,8 @@ h1 {
 
 #audio-button img {
     width: 100%;
-    height: auto; /* Cambia esto para mantener la proporción de la imagen */
+    height: 100%; /* Establece la altura de la imagen al 100% del botón */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
 }
 
 
