@@ -82,3 +82,17 @@ function getReason(userChoice, computerChoice) {
         return `La IA logra vencer tu ${options[userChoice]}.`;
     }
 }
+
+// Función para alternar la reproducción del audio al hacer clic en el botón
+function toggleAudio() {
+    var audio = document.getElementById("background-music");
+    var audioIcon = document.getElementById("audio-icon");
+
+    if (audio.paused) {
+        audio.play(); // Reproducir el audio
+        audioIcon.src = "on.png"; // Cambiar la imagen del icono a 'on.png'
+    } else {
+        audio.pause(); // Pausar el audio
+        audioIcon.src = "off.png"; // Cambiar la imagen del icono a 'off.png'
+    }
+}
