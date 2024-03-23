@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <audio id="background-music">
-  <source src="chill.mp3" type="audio/mp3">
-  <!-- Si tienes otros formatos de audio, puedes agregarlos como fuentes alternativas aquí -->
-  Tu navegador no admite la reproducción de audio.
+  <audio id="background-music" autoplay loop>
+    <source src="chill.wav" type="audio/wav">
+    <!-- Si tienes otros formatos de audio, puedes agregarlos como fuentes alternativas aquí -->
+    Tu navegador no admite la reproducción de audio.
 </audio>
 
 <script>
@@ -24,7 +24,6 @@
   // Reproducir el audio automáticamente al cargar la página
   audio.autoplay = true;
 </script>
-
 
     <div id="game-container">
         <h1>Piedra, Papel, Tijera con IA</h1>
