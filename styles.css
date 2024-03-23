@@ -1,3 +1,10 @@
+#container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Establece el alto del contenedor al 100% del viewport */
+}
+
 body {
     margin: 0;
     padding: 0;
