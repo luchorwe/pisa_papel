@@ -8,16 +8,6 @@
  
 </head>
 <body>
-  <body>
-      
-  <audio id="background-music" controls loop onloadeddata="setTimeout(function() { document.getElementById('background-music').play(); }, 20);">
-  <source src="chill.mp3" type="audio/mpeg">
-  <!-- Si tienes otros formatos de audio, puedes agregarlos como fuentes alternativas aquí -->
-  Tu navegador no admite la reproducción de audio.
-</audio>
-    
-
-</body>
     
     <div id="game-container">
         <h1>Piedra, Papel, Tijera con IA</h1>
@@ -37,6 +27,44 @@
             <button id="restart">Reiniciar Juego</button>
         </div>
     </div>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel, Tijera con IA</title>
+    <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+  <body>
+    
+    <div id="game-container">
+        <h1>Piedra, Papel, Tijera con IA</h1>
+         <div id="emojis">
+            👊✋✌️ <!-- Emojis de piedra, papel y tijeras -->
+        </div>
+        <div id="options">
+            <button id="rock">Piedra</button>
+            <button id="paper">Papel</button>
+            <button id="scissors">Tijera</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <div id="popup">
+        <div id="popup-content">
+            <h2 id="popup-message"></h2>
+            <button id="restart">Reiniciar Juego</button>
+        </div>
+    </div>
+    <button id="play-audio"class="custom-button"></button>
+    <audio id="background-music" loop>
+        <source src="chill.mp3" type="audio/mp3">
+        Tu navegador no admite la reproducción de audio.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
     <script src="script.js"></script>
 </body>
 </html>
