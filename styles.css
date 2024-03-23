@@ -1,10 +1,10 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: "Comic Sans MS", cursive;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
 }
+
 
 #game-container {
     text-align: center;
@@ -15,7 +15,7 @@ h1 {
     font-size: 36px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px; /* Espacio debajo del título */
+    margin-bottom: 30px; /* Espacio debajo del título */
 }
 
 #audio-button {
@@ -25,11 +25,15 @@ h1 {
     border: none;
     cursor: pointer;
     overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del botón */
+    display: flex; /* Agrega display flex */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 #audio-image {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del botón */
-    height: 100%; /* Ajusta la altura de la imagen al 100% del botón */
+    height: auto; /* Ajusta la altura automáticamente */
+    max-height: 100%; /* Establece una altura máxima del 100% */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
 }
 
