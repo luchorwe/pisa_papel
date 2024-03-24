@@ -77,6 +77,11 @@ button:hover {
     font-size: 100px; /* Tamaño de fuente más grande para los emojis */
 }
 
+#lottery-animation {
+    font-size: 100px; /* Tamaño de fuente grande para los emojis */
+    display: none; /* Ocultar inicialmente la animación de lotería */
+}
+
 #popup-content {
     position: absolute;
     top: 50%;
