@@ -56,11 +56,11 @@ function showLotteryAnimation(computerChoice) {
 
     // Simulando una animación con un retraso de 3 segundos
     setTimeout(() => {
-        // Muestra las manos de la computadora nuevamente después de la animación
+        // Oculta la animación de lotería y muestra las manos de la computadora nuevamente después de la animación
+        document.getElementById("lottery-animation").style.display = "none";
         document.getElementById("emojis").style.display = "block";
     }, 3000);
 }
-
 
 
 function play(userChoice) {
