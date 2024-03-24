@@ -16,8 +16,11 @@ document.getElementById("restart").addEventListener("click", () => {
 });
 
 function play(userChoice) {
+    // Ocultar las manos de la computadora antes de la animación de lotería
+    document.getElementById("emojis").style.display = "none";
+
     // Muestra la animación de lotería
-    showLotteryAnimation();
+    showLotteryAnimation(userChoice);
     
     // Espera 3 segundos antes de mostrar el resultado
     setTimeout(() => {
@@ -38,28 +41,17 @@ function play(userChoice) {
         const computerEmoji = getUserEmoji(computerChoice);
         document.getElementById("popup-message").innerText = `Tu elección: ${options[userChoice]} ${userEmoji}\nLa PC elige: ${options[computerChoice]} ${computerEmoji}\n${result} ${emoji}\n${reason}`;
         document.getElementById("popup").style.display = "block";
+
+        // Mostrar las manos de la computadora después del resultado
+        document.getElementById("emojis").style.display = "flex";
     }, 3000);
 }
 
-function showLotteryAnimation(computerChoice) {
-    // Oculta las manos de la computadora
-    document.getElementById("emojis").style.display = "none";
+function showLotteryAnimation(userChoice) {
+    // Mostrar la mano de la computadora correspondiente a la elección del usuario
+    document.getElementById("emojis").innerHTML = `<div>${getUserEmoji(userChoice)}</div>`;
 
-    // Muestra la mano de la computadora correspondiente a su elección durante la animación de lotería
-    const computerEmoji = getUserEmoji(computerChoice);
-    document.getElementById("lottery-animation").innerHTML = computerEmoji;
-
-    // Muestra la animación de lotería aquí
-    // Puedes agregar tu código para mostrar la animación de lotería
-    // Por ejemplo, puedes cambiar la imagen o el estilo del contenedor que muestra la animación de lotería
-    // Asegúrate de ocultar la animación después de un tiempo adecuado
-
-    // Simulando una animación con un retraso de 3 segundos
-    setTimeout(() => {
-        // Oculta la animación de lotería y muestra las manos de la computadora nuevamente después de la animación
-        document.getElementById("lottery-animation").style.display = "none";
-        document.getElementById("emojis").style.display = "block";
-    }, 3000);
+    // Simular la animación de lotería aquí (cambiar estilos, agregar clases, etc.)
 }
 
 
