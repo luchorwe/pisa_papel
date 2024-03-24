@@ -28,7 +28,7 @@ function showLotteryAnimation(userChoice) {
     document.getElementById("lottery-animation").style.display = "block";
     setTimeout(() => {
         document.getElementById("lottery-animation").style.display = "none";
-        play(userChoice);
+        play(userChoice); // Mover aquí para que se ejecute después de la animación
     }, 3000);
 }
 
@@ -49,8 +49,6 @@ function play(userChoice) {
     const computerEmoji = getUserEmoji(computerChoice);
     document.getElementById("popup-message").innerText = `Tu elección: ${options[userChoice]} ${userEmoji}\nLa PC elige: ${options[computerChoice]} ${computerEmoji}\n${result} ${emoji}\n${reason}`;
     document.getElementById("popup").style.display = "block";
-
-    // Resto del código del juego...
 }
 
 function predictNextMove() {
