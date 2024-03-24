@@ -3,11 +3,20 @@ const options = {
     "paper": "Papel",
     "scissors": "Tijera"
 };
+
 let previousMove = null;
 
-document.getElementById("rock").addEventListener("click", () => play("rock"));
-document.getElementById("paper").addEventListener("click", () => play("paper"));
-document.getElementById("scissors").addEventListener("click", () => play("scissors"));
+document.getElementById("rock").addEventListener("click", () => {
+    showLotteryAnimation("rock");
+});
+
+document.getElementById("paper").addEventListener("click", () => {
+    showLotteryAnimation("paper");
+});
+
+document.getElementById("scissors").addEventListener("click", () => {
+    showLotteryAnimation("scissors");
+});
 
 document.getElementById("restart").addEventListener("click", () => {
     document.getElementById("result").innerText = "";
@@ -15,45 +24,13 @@ document.getElementById("restart").addEventListener("click", () => {
     previousMove = localStorage.getItem("previousMove");
 });
 
-function play(userChoice) {
-    // Ocultar las manos de la computadora antes de la animación de lotería
-    document.getElementById("emojis").style.display = "none";
-
-    // Muestra la animación de lotería
-    showLotteryAnimation(userChoice);
-    
-    // Espera 3 segundos antes de mostrar el resultado
+function showLotteryAnimation(userChoice) {
+    document.getElementById("lottery-animation").style.display = "block";
     setTimeout(() => {
-        const computerChoice = predictNextMove();
-        const result = getResult(userChoice, computerChoice);
-        const reason = getReason(userChoice, computerChoice);
-
-        // Mostrar el mensaje emergente con emoji y razón del resultado
-        let emoji;
-        if (result === "¡Empate!") {
-            emoji = "😐";
-        } else if (result === "¡Ganaste!") {
-            emoji = "🎉";
-        } else {
-            emoji = "😢";
-        }
-        const userEmoji = getUserEmoji(userChoice);
-        const computerEmoji = getUserEmoji(computerChoice);
-        document.getElementById("popup-message").innerText = `Tu elección: ${options[userChoice]} ${userEmoji}\nLa PC elige: ${options[computerChoice]} ${computerEmoji}\n${result} ${emoji}\n${reason}`;
-        document.getElementById("popup").style.display = "block";
-
-        // Mostrar las manos de la computadora después del resultado
-        document.getElementById("emojis").style.display = "flex";
+        document.getElementById("lottery-animation").style.display = "none";
+        play(userChoice);
     }, 3000);
 }
-
-function showLotteryAnimation(userChoice) {
-    // Mostrar la mano de la computadora correspondiente a la elección del usuario
-    document.getElementById("emojis").innerHTML = `<div>${getUserEmoji(userChoice)}</div>`;
-
-    // Simular la animación de lotería aquí (cambiar estilos, agregar clases, etc.)
-}
-
 
 function play(userChoice) {
     const computerChoice = predictNextMove();
@@ -72,40 +49,9 @@ function play(userChoice) {
     const computerEmoji = getUserEmoji(computerChoice);
     document.getElementById("popup-message").innerText = `Tu elección: ${options[userChoice]} ${userEmoji}\nLa PC elige: ${options[computerChoice]} ${computerEmoji}\n${result} ${emoji}\n${reason}`;
     document.getElementById("popup").style.display = "block";
+
+    // Resto del código del juego...
 }
-
-
-function animateLoteria() {
-    // Obtener referencia al div de emojis
-    const emojisDiv = document.getElementById("emojis");
-    
-    // Definir emojis de lotería
-    const loteriaEmojis = ["👊", "✋", "✌️"];
-
-    // Intervalo para cambiar los emojis cada 200 milisegundos
-    let interval = setInterval(() => {
-        // Escoger un emoji al azar de la lista de lotería
-        const randomEmoji = loteriaEmojis[Math.floor(Math.random() * loteriaEmojis.length)];
-        // Mostrar el emoji en el div
-        emojisDiv.innerText = randomEmoji;
-    }, 200);
-
-    // Detener la animación después de 3 segundos
-    setTimeout(() => {
-        clearInterval(interval);
-    }, 3000);
-}
-
-function showGif() {
-    // Mostrar el GIF
-    const gifContainer = document.getElementById("gif-container");
-    gifContainer.style.display = "block";
-    // Ocultar el GIF después de 3 segundos
-    setTimeout(() => {
-        gifContainer.style.display = "none";
-    }, 3000);
-}
-
 
 function predictNextMove() {
     if (previousMove === null) {
@@ -115,7 +61,6 @@ function predictNextMove() {
         return previousMove;
     }
 }
-
 
 function getResult(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
