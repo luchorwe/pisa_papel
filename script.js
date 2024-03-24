@@ -5,9 +5,17 @@ const options = {
 };
 let previousMove = null;
 
-document.getElementById("rock").addEventListener("click", () => play("rock"));
-document.getElementById("paper").addEventListener("click", () => play("paper"));
-document.getElementById("scissors").addEventListener("click", () => play("scissors"));
+document.getElementById("rock").addEventListener("click", () => {
+    showLotteryAnimation("rock");
+});
+
+document.getElementById("paper").addEventListener("click", () => {
+    showLotteryAnimation("paper");
+});
+
+document.getElementById("scissors").addEventListener("click", () => {
+    showLotteryAnimation("scissors");
+});
 
 document.getElementById("restart").addEventListener("click", () => {
     document.getElementById("result").innerText = "";
@@ -15,36 +23,33 @@ document.getElementById("restart").addEventListener("click", () => {
     previousMove = localStorage.getItem("previousMove");
 });
 
-function play(userChoice) {
-    // Agregar la animación de lotería antes de mostrar el GIF y el resultado
-    animateLoteria();
-
-    // Mostrar el GIF después de la animación de lotería y antes del resultado
+function showLotteryAnimation(userChoice) {
+    document.getElementById("lottery-animation").style.display = "block";
     setTimeout(() => {
-        showGif();
+        document.getElementById("lottery-animation").style.display = "none";
+        play(userChoice);
     }, 3000);
-
-    // Mostrar el resultado después de mostrar el GIF
-    setTimeout(() => {
-        const computerChoice = predictNextMove();
-        const result = getResult(userChoice, computerChoice);
-        const reason = getReason(userChoice, computerChoice);
-
-        // Mostrar el mensaje emergente con emoji y razón del resultado
-        let emoji;
-        if (result === "¡Empate!") {
-            emoji = "😐";
-        } else if (result === "¡Ganaste!") {
-            emoji = "🎉";
-        } else {
-            emoji = "😢";
-        }
-        const userEmoji = getUserEmoji(userChoice);
-        const computerEmoji = getUserEmoji(computerChoice);
-        document.getElementById("popup-message").innerText = `Tu elección: ${options[userChoice]} ${userEmoji}\nLa PC elige: ${options[computerChoice]} ${computerEmoji}\n${result} ${emoji}\n${reason}`;
-        document.getElementById("popup").style.display = "block";
-    }, 6000); // Espera 6 segundos antes de mostrar el resultado
 }
+
+function play(userChoice) {
+    const computerChoice = predictNextMove();
+    const result = getResult(userChoice, computerChoice);
+    const reason = getReason(userChoice, computerChoice);
+
+    let emoji;
+    if (result === "¡Empate!") {
+        emoji = "😐";
+    } else if (result === "¡Ganaste!") {
+        emoji = "🎉";
+    } else {
+        emoji = "😢";
+    }
+    const userEmoji = getUserEmoji(userChoice);
+    const computerEmoji = getUserEmoji(computerChoice);
+    document.getElementById("popup-message").innerText = `Tu elección: ${options[userChoice]} ${userEmoji}\nLa PC elige: ${options[computerChoice]} ${computerEmoji}\n${result} ${emoji}\n${reason}`;
+    document.getElementById("popup").style.display = "block";
+}
+
 
 function animateLoteria() {
     // Obtener referencia al div de emojis
